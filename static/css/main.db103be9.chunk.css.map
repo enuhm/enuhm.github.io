@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,4BACE,wBAAyB,CACzB,eAAgB,CAChB,WAAY,CACZ,sBAAuB,CACvB,QAAS,CACT,WACF","file":"main.db103be9.chunk.css","sourcesContent":[".ui.borderless.topMenu.menu {\r\n  background-color: #f7f7f7;\r\n  box-shadow: none;\r\n  border: none;\r\n  justify-content: center;\r\n  margin: 0;\r\n  padding: 5px;\r\n}"]}
