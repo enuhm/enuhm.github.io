@@ -1,5 +1,22 @@
+body {
+  background-color: #21802c !important;
+}
+
+.backgroundImage {
+  background-size: cover;
+  background: url("http://www.enuhm.com/wp-content/uploads/2018/10/0925_ENetwork_KC_logo_01-1024x1024.jpg") no-repeat fixed 0px -75px;
+}
+
 .ui.borderless.topMenu.menu {
-  background-color: #f7f7f7;
+  box-shadow: none;
+  border: none;
+  justify-content: center;
+  margin: 0;
+  padding: 5px;
+}
+
+.ui.logo.segment {
+  background-color: #2c2422;
   box-shadow: none;
   border: none;
   justify-content: center;
