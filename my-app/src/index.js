@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './style.css';
 import 'semantic-ui-css/semantic.min.css';
 import { Container, Header, Menu, Dropdown, Image, Grid, Icon, Segment } from 'semantic-ui-react';
+import enetworkLogo from './images/enetwork-logo-1024-cropped.jpg';
 
 class TopMenu extends React.Component {
   render() {
@@ -27,7 +28,7 @@ class ENetworkLogo extends React.Component {
     return (
         <Segment className="logo">
           <Container>
-            <Image centered src="http://www.enuhm.com/wp-content/uploads/2018/10/0925_ENetwork_KC_logo_01-1024x1024.jpg" size='huge' />
+            <Image centered src={ enetworkLogo } size='huge' />
           </Container>
         </Segment>
     )
@@ -58,24 +59,32 @@ class Goals extends React.Component {
     return (
         <Grid container columns={4} textAlign="center">
           <Grid.Column>
-            <Icon name='user' />
-            <Header as="h2">Networking</Header>
-            We strive to create stronger interdisciplinary relations throughout different colleges and majors with an emphasis on engineering.
+            <Segment inverted>
+              <Icon name='user' size='big' />
+              <Header as="h2">Networking</Header>
+              We strive to create stronger interdisciplinary relations throughout different colleges and majors with an emphasis on engineering.
+              </Segment>
           </Grid.Column>
           <Grid.Column>
-            <Icon name='rocket' />
-            <Header as="h2">Innovation</Header>
+            <Segment inverted>
+              <Icon name='rocket' size='big' />
+              <Header as="h2">Innovation</Header>
             Our new club provides unique opportunities where students can connect and share their ideas toward a common goal.
+            </Segment>
           </Grid.Column>
           <Grid.Column>
-            <Icon name='send' />
-            <Header as="h2">Outreach</Header>
-            We seek outreach to a wide range of programs to educate and promote growth in STEM fields.
+            <Segment inverted>
+              <Icon name='send' size='big' />
+              <Header as="h2">Outreach</Header>
+              We seek outreach to a wide range of programs to educate and promote growth in STEM fields.
+            </Segment>
           </Grid.Column>
           <Grid.Column>
-            <Icon name='home' />
-            <Header as="h2">Home</Header>
-            Engineering Network welcomes all majors. We maintain a supportive environment that supplements and enhances your academic and professional experiences.
+            <Segment inverted>
+              <Icon name='home' size='big' />
+              <Header as="h2">Home</Header>
+              Engineering Network welcomes all majors. We maintain a supportive environment that supplements and enhances your academic and professional experiences.
+            </Segment>
           </Grid.Column>
         </Grid>
     )
@@ -85,7 +94,46 @@ class Goals extends React.Component {
 class Announcements extends React.Component {
   render() {
     return (
-        <Header as="h1">FullWidthImage</Header>
+        <Segment>
+          <Header as="h1">Announcements</Header>
+          <Header as="h2">Thank you for coming out to Friendsmas on 12/9!</Header>
+          It was a pleasure to see both familiar and new faces!
+          Check out our events page for more events and information here.
+        </Segment>
+    )
+  }
+}
+
+class Alumni extends React.Component {
+  render() {
+    return (
+        <Grid container centered>
+          <Grid.Column width='4'>
+            <Header as='h2'>Our student membership is proud of be a part of the following majors:</Header>
+            <br/>Biochemistry
+            <br/>Biological Engineering
+            <br/>Civil Engineering
+            <br/>Computer Engineering
+            <br/>Computer Science
+            <br/>Electrical Engineering
+            <br/>Marketing
+            <br/>Mechanical Engineering
+            <br/>
+          </Grid.Column>
+          <Grid.Column width='6'>
+            <Header as='h1'>Just Started!</Header>
+            We are still growing out club! Thanks for being a part of history.
+            <br/>Alumni:
+            <br/>Scott Fukuhara—B.S. Civil Engineering (Spring 2020)
+            <br/>Brian Lam—B.S. Civil Engineering (Spring 2020)
+            <br/>Kacie Shimabukuro—B.S. Mechanical Engineering (Spring 2020)
+            <br/>Jing Zheng—B.S. Civil Engineering (Fall 2019)
+            <br/>Anthony Simon—B.S. Civil Engineering (Spring 2019)
+            <br/>Marcus Chun—B.S. Civil Engineering (Spring 2019)
+            <br/>Brittney Mopas—B.S. Biochemistry (Fall 2019)
+            <br/>
+          </Grid.Column>
+        </Grid>
     )
   }
 }
@@ -93,7 +141,25 @@ class Announcements extends React.Component {
 class FooterMenu extends React.Component {
   render() {
     return (
-        <Header as="h1">FooterMenu</Header>
+        <Segment inverted >
+          <Grid centered container>
+            <Grid.Row/>
+            <Grid.Row centered>
+              <br/>Engineering Network
+              <br/>Connecting since 2018
+              <br/>Honolulu, HI   96822
+              <br/>enetwork@hawaii.edu
+            </Grid.Row>
+            <Grid.Row/>
+            <Grid.Row>
+              <Grid.Column centered width={9}>
+                <i>Although this RIO has members who are University of Hawai’i at Mānoa students, faculty, or employees, the RIO is independent of the University which is not responsible for the RIO’s contracts, acts or omissions.</i>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row><i>Engineering Network 2020, All Rights Reserved</i></Grid.Row>
+          </Grid>
+        </Segment>
+
     )
   }
 }
@@ -109,6 +175,7 @@ class ENetwork extends React.Component {
           <FullWidthImage/>
           <Goals/>
           <Announcements/>
+          <Alumni/>
           <FooterMenu/>
         </div>
     );
